@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import ListCreateDelete from './ListCreateDelete'
-import Searching from './Searching'
 
 
 
@@ -12,7 +11,6 @@ const TodoIndex = () => {
     const [todoItems,setTodoItems] = useState(todoItemsFromLocalStorage)
     const [addOrUpdate,setAddOrUpdate] = useState(true)
     const [editedTodo,setEditedTodo] = useState(null)
-    const [search, setSearch] = useState(false)
     const [searchingText,setSearchingText] = useState('')
 
 

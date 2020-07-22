@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import Axios from 'axios'
 import CardDesign from './CardDesign';
+import {Container,Row,Col} from 'react-bootstrap'
 
 function Ajax() {
 
@@ -27,13 +28,22 @@ function Ajax() {
       } else if (!isLoaded) {
         return <div>Loading...</div>;
       } else {
+
+        let itemCards = posts.map(post=> {
+            return(
+                <Col sm="4">
+                   <CardDesign key={post.id} userId={post.userId} id={post.id} title={post.title} body={post.body}/> 
+                </Col>
+            )
+        })
+
         return (
             <div>
-                {
-                    posts.map(post =>
-                    <CardDesign key={post.id} userId={post.userId} id={post.id} title={post.title} body={post.body}/>)       
-                }
-            
+                <Container fluid>
+                    <Row>
+                        {itemCards}
+                    </Row>
+                </Container>
             </div>
         );
       }
