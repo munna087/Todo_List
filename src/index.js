@@ -6,7 +6,8 @@ import App from './App';
 import Ajax from './Ajax';
 import TodoIndex from './TodoIndex';
 import Box from './Box';
-import {Route, Link, BrowserRouter as Router} from '../node_modules/react-router-dom';
+import Error from './Error';
+import {Switch,Route, Link, BrowserRouter as Router} from '../node_modules/react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -23,10 +24,13 @@ const myRouter = (
         <Link to="/Box">Box<br></br></Link>
       </ul>
       
-      <Route exact path="/" component={App} />
-      <Route path="/Ajax" component={Ajax} />
-      <Route path="/TodoIndex" component={TodoIndex} />
-      <Route path="/Box" component={Box} />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/Ajax" component={Ajax} />
+        <Route path="/TodoIndex" component={TodoIndex} />
+        <Route path="/Box" component={Box} />
+        <Route component={Error} />
+      </Switch>
 
 
     </div>

@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import TodoIndex from './TodoIndex';
 import Ajax from './Ajax';
+import Error from './Error';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
