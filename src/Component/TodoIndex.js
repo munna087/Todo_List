@@ -65,7 +65,7 @@ const TodoIndex = () => {
 
     return (
         <div >
-            <div>
+            <div style={{margin: 'auto', width: ' 100% ', maxWidth: '400px'}}>
                 <header>
                     <br></br>
                     <form onSubmit={addTodoItem}>

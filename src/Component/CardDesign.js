@@ -6,7 +6,7 @@ function CardDesign({ userId, id, title, body}) {
     const [showBody,setShowBody] = useState(false)
 
     const showDetails = (body) => {
-        setShowBody(true)
+        setShowBody(!showBody)
         console.log(`${body}`) 
 
     }
@@ -21,9 +21,9 @@ function CardDesign({ userId, id, title, body}) {
                     <Card.Text><i>Title:</i> {title} </Card.Text>
   
                     <div>{ showBody &&  <Card.Text>{body}<br></br></Card.Text> } </div>
+                    <br></br>
                     
-                    <Button style={{marginRight: '20px' }} variant="primary" onClick={() => showDetails(body)}>Show details</Button>
-                    <Button variant="primary" onClick={() => setShowBody(false)}>Cancel</Button>
+                    <Button style={{marginRight: '20px' }} variant="primary" onClick={() => showDetails(body)}>{ !showBody ? 'Show details' : 'Show less'}</Button>
                 </Card.Body>
             </Card>
         </div>
