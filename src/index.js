@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import Ajax from './Ajax';
-import TodoIndex from './TodoIndex';
-import Box from './Box';
-import Error from './Error';
+import Ajax from './Component/Ajax';
+import TodoIndex from './Component/TodoIndex';
+import Box from './Component/Box';
+import Error from './Component/Error';
 import {Switch,Route, Link, BrowserRouter as Router} from '../node_modules/react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
