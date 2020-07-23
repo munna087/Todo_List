@@ -32,7 +32,7 @@ function Ajax() {
         let itemCards = posts.map(post=> {
             return(
                 <Col sm="4">
-                   <CardDesign key={post.id} userId={post.userId} id={post.id} title={post.title} body={post.body}/> 
+                   <CardDesign key={post.title} userId={post.userId} id={post.id} title={post.title} body={post.body}/> 
                 </Col>
             )
         })

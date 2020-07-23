@@ -64,7 +64,7 @@ const TodoIndex = () => {
 
 
     return (
-        <div>
+        <div >
             <div>
                 <header>
                     <br></br>
@@ -77,7 +77,7 @@ const TodoIndex = () => {
                 <br></br>
                 <input type = 'text' placeholder='@search' onChange={(e) => setSearchingText(e.target.value)}></input>
 
-                < ListCreateDelete key={todoItems.todoValue} listItems = {todoItems} deleteItem = {deleteTodoItem} editItem = {editTodoItem} searchingText= {searchingText}/>
+                <ListCreateDelete key={todoItems.todoValue} listItems = {todoItems} deleteItem = {deleteTodoItem} editItem = {editTodoItem} searchingText= {searchingText}/>
             </div>
         </div>
     )
