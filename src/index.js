@@ -7,6 +7,10 @@ import Ajax from './Component/Ajax';
 import TodoIndex from './Component/TodoIndex';
 import Box from './Component/Box';
 import Error from './Component/Error';
+import User from './Component/User';
+import UserDetails from './Component/UserDetails'
+import DesignCounter from './Component/DesignCounter'
+
 import {Switch,Route, Link, BrowserRouter as Router} from '../node_modules/react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
@@ -19,16 +23,21 @@ const myRouter = (
     <div>
       <ul>
         <Link to="/">Home<br></br></Link>
-        <Link to="/Ajax">Ajax<br></br></Link>
-        <Link to="/TodoIndex">TodoList<br></br></Link>
-        <Link to="/Box">Box<br></br></Link>
+        <Link to="/ajax">Ajax<br></br></Link>
+        <Link to="/todoIndex">TodoList<br></br></Link>
+        <Link to="/box">Box<br></br></Link>
+        <Link to="/user">User<br></br></Link>
+        <Link to="/designCounter">DesignCounter<br></br></Link>
       </ul>
       
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/Ajax" component={Ajax} />
-        <Route path="/TodoIndex" component={TodoIndex} />
-        <Route path="/Box" component={Box} />
+        <Route path="/ajax" component={Ajax} />
+        <Route path="/todoIndex" component={TodoIndex} />
+        <Route path="/designCounter" component={DesignCounter} />
+        <Route path="/box" component={Box} />
+        <Route exact path="/user" component={User} />
+        <Route path="/users/:username" component={UserDetails} />
         <Route component={Error} />
       </Switch>
 
